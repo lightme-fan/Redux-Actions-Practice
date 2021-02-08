@@ -9,17 +9,17 @@ import SpecialTextBox from "./containers/SpecialTextBox";
 import Counter from "./components/Counter";
 import SpecialText from "./containers/SpecialText";
 import UserButtons from "./components/UserButtons";
-import Thermostat from "./components/Thermostat";
-import ChangeTemperature from "./components/ChangeTemperature";
+import Thermostat from "./containers/Thermostat";
+import ChangeTemperature from "./containers/ChangeTemprature";
 import ImagePreview from "./components/ImagePreview";
 import ImageUrlTextBox from "./components/ImageUrlTextBox";
-import CurrentCity from "./components/CurrentCity";
-import CityDropDown from "./components/CityDropDown";
+import CurrentCity from "./containers/CurrentCity";
+import CityDropDown from "./containers/CityDropDown";
 import SearchTextBox from "./components/SearchTextBox";
 import SortUsers from "./components/SortUsers";
 import ScaleImage from "./components/ScaleImage";
-import Modal from "./components/Modal";
-import ShowModal from "./components/ShowModal";
+import Modal from "./containers/Modal";
+import ShowModal from "./containers/ShowModal";
 
 function App() {
   return (

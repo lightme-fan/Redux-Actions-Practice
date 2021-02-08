@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 function Counter({ count }) {
   return (
@@ -7,4 +8,9 @@ function Counter({ count }) {
       </div>
   );
 }
-export default Counter;
+
+const mapStateToProps = (globalState) => {
+  return {count: globalState.currentCount}
+}
+
+export default connect(mapStateToProps)(Counter);

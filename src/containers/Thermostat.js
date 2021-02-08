@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import SpecialText from "../components/SpecialText";
+import Thermostat from '../components/Thermostat';
 
 //map a prop called text to the state specialText
 function mapStateToProps(globalState){
   return {
-    text: globalState.specialText
+    temp: globalState.currentTemp
   }
 }
 
-export default connect(mapStateToProps, null)(SpecialText);
+export default connect(mapStateToProps, null)(Thermostat);

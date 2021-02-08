@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import SpecialText from "../components/SpecialText";
+import ShowModal from '../components/ShowModal';
 
 //map a prop called text to the state specialText
 function mapStateToProps(globalState){
   return {
-    text: globalState.specialText
+    toggleModal: globalState.displayModal
   }
 }
 
-export default connect(mapStateToProps, null)(SpecialText);
+export default connect(null, null)(ShowModal);
