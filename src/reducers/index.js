@@ -17,6 +17,20 @@ function users(state =[], action){
   switch (action.type) {
     case "SET_USER":
       return [...state, action.payload]
+    
+      case "ADD_USER_BUTTON": {
+        return [...state, action.payload]
+      }
+
+      case "REMOVE_USER_BUTTON": {
+        console.log(action.payload);
+        const filtered = state.filter(item => item !== action.payload);
+        return filtered
+      }
+
+      case "SORT_USER": {
+        return state.sort((a,b) => a.name > b.name)
+      }
     default:
       return state
   }
@@ -50,16 +64,26 @@ function displayModal(state=false, action){
   }
 }
 
-function imageUrl(state=""){
+function imageUrl(state="", action){
+  switch (action.type) {
+    case "ADD_IMAGE_URL":
+      return action.payload
+    default:
+      return state
+  }
+}
+
+function currentUserSort(state="first_name", action){ 
   return state
 }
 
-function currentUserSort(state="first_name"){
-  return state;
-}
-
-function imageScale(state=1){
-  return state
+function imageScale(state=1, action){
+  switch (action.type) {
+    case "ADD_SCALE":
+        return action.payload
+    default:
+      return state
+  }
 }
 
 function searchText(state= "", action){

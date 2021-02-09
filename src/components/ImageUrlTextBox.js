@@ -8,6 +8,7 @@ function ImageUrlTextBox({ set }) {
         <TextField
           type="string"
           label="url"
+          // value="https://www.thestatesman.com/wp-content/uploads/2020/04/1c5b1aa3386eeb2c21d633f04e2ddfbe.jpg"
           onChange={(e)=>{
           if(set){
             set(e.target.value);

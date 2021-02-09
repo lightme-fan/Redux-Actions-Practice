@@ -52,3 +52,38 @@ export function showModal(value){
     payload: value
   }
 }
+
+export function addImageUrl(image){
+  return {
+    type: "ADD_IMAGE_URL",
+    payload: image
+  }
+}
+
+export function imageScale(image){
+  return {
+    type: "ADD_SCALE",
+    payload: image
+  }
+}
+
+export function addUserButton(user){
+  return {
+    type: "ADD_USER_BUTTON",
+    payload: user
+  }
+}
+
+export function removeUserButton(user){
+  return {
+    type: "REMOVE_USER_BUTTON",
+    payload: user
+  }
+}
+
+export function sortUser(user){
+  return {
+    type: "SORT_USER",
+    payload: user
+  }
+}

@@ -3,7 +3,7 @@ import { searchText } from '../actions';
 import SearchTextBox from "../components/SearchTextBox";
 
 //map the "setSpecialText" action function to a prop function called "set"
-function mapStateToProps(globalState){
+function mapStateToProps(globalState, e){
     return {
       set: globalState.searchText
     }
