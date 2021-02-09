@@ -53,6 +53,13 @@ export function showModal(value){
   }
 }
 
+export function hideModal(value){
+  return {
+    type: "HIDE_MODAL",
+    payload: value
+  }
+}
+
 export function addImageUrl(image){
   return {
     type: "ADD_IMAGE_URL",

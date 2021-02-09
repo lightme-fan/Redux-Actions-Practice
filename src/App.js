@@ -16,7 +16,7 @@ import ImageUrlTextBox from "./containers/ImageUrlTextBox";
 import CurrentCity from "./containers/CurrentCity";
 import CityDropDown from "./containers/CityDropDown";
 import SearchTextBox from "./containers/searchTextBox";
-import SortUsers from "./components/SortUsers";
+import SortUsers from "./containers/SortUser";
 import ScaleImage from "./containers/ScaleImage";
 import Modal from "./containers/Modal";
 import ShowModal from "./containers/ShowModal";

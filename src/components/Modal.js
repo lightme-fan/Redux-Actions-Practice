@@ -1,6 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import Button from '@material-ui/core/Button';
+// import { connect } from 'react-redux';
+// import { hideModal} from '../actions';
 
 const customStyles = {
   content : {
@@ -29,4 +31,5 @@ function ModalTemplate({ displayModal, toggleModal }) {
     </Modal>
   );
 }
+
 export default ModalTemplate;

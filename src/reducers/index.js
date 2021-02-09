@@ -24,12 +24,10 @@ function users(state =[], action){
 
       case "REMOVE_USER_BUTTON": {
         console.log(action.payload);
+        const sliced = state.slice(0, state.length - 1)
         const filtered = state.filter(item => item !== action.payload);
-        return filtered
-      }
-
-      case "SORT_USER": {
-        return state.sort((a,b) => a.name > b.name)
+        console.log(filtered);
+        return sliced
       }
     default:
       return state
@@ -58,7 +56,9 @@ function currentTemp(state=0, action){
 function displayModal(state=false, action){
   switch (action.type) {
     case "SHOW_MODAL":
-      return action.payload
+      return action.payload = true
+    case "HIDE_MODAL":
+      return action.payload = false
     default:
       return state;
   }
@@ -73,8 +73,13 @@ function imageUrl(state="", action){
   }
 }
 
-function currentUserSort(state="first_name", action){ 
-  return state
+function currentUserSort(state="first_name", action){
+  switch (action.type) {
+    case "SORT_USER":
+      return action.payload
+    default:
+      return state
+  }
 }
 
 function imageScale(state=1, action){
