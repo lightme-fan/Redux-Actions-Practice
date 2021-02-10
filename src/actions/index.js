@@ -94,3 +94,14 @@ export function sortUser(user){
     payload: user
   }
 }
+
+export function getUserFromApi(user){
+  return async (dispatch) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
+    const users = await res.json()
+    dispatch({
+      type: "GET_USERS",
+      value: users
+    })
+  }
+}

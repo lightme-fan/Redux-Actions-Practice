@@ -29,6 +29,8 @@ function users(state =[], action){
         console.log(filtered);
         return sliced
       }
+      case "GET_USERS":
+      return action.value
     default:
       return state
   }

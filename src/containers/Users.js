@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import { users } from '../actions';
+import { getUserFromApi, users } from '../actions';
 import Users from '../components/Users';
 
 function mapStateToProps(state){
@@ -9,5 +9,8 @@ function mapStateToProps(state){
         firstNameFilter: state.searchText
     }
 }
+const mapDispatchToProps = {
+    getUsers: getUserFromApi
+}
 
-export default connect(mapStateToProps, null)(Users)
+export default connect(mapStateToProps, mapDispatchToProps)(Users)
